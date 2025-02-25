@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bt-pr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--Impotação da fonte do google -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!--Importação do  materialize.css-->
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+     <!-- Importação dos icones -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Link CSS formatação -->
+     <link rel="stylesheet" href="{{url_for ('static',filename = 'styles/index.css')}}">
+
+    <!-- Link css cores -->
+     <link rel="stylesheet" href="{{url_for ('static', filename = 'styles/cores-index.css')}}">
+     
+    <title>Página principal</title>
+</head>
+<body>
+    <section>
+        <main>
+
+            <div class="row">
+                <form class="col s12" action="/post/comentario" method="POST">
+
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <label for="input_text"> Digite seu usuário aqui:</label>
+                      <input name="usuario" id="input_text" type="text" data-length="10">
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <label for="textarea2"> Digite seu comentário aqui: </label>
+                      <textarea name="comentario" id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                    </div>
+                  </div>
+
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                    <i class="material-icons right">send</i>
+                  </button>
+
+                </form>
+              </div>
+
+        </main>
+    </section>
+</body>
+</html>
